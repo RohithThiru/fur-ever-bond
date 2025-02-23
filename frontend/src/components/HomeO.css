@@ -1,0 +1,36 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fff9e6;
+    text-align: center;
+  }
+  
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .website-name {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff4f4f;
+    margin-bottom: 20px;
+  }
+  
+  .hero-image {
+    width: 50%;
+    max-width: 600px;
+  }
+
+  .hero-text{
+    color: #ff4f4f !important;
+    font-size: larger;
+    font-weight: bolder;
+  }
+  

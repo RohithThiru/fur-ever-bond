@@ -1,0 +1,96 @@
+/* Full-screen background - Replace the URL with your own */
+.signup-container {
+    /* background-image: url("../../public/signupimage.jpg");  */
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Transparent signup box with a soft blur effect */
+  .signup-box {
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(20px); /* Frosted glass effect */
+    text-align: center;
+    width: 350px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Title */
+  h2 {
+    font-size: 26px;
+    color: #fff;
+  }
+  
+  /* Subtitle */
+  p {
+    font-size: 16px;
+    color: #ddd;
+  }
+  
+  /* Input Fields */
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+  }
+  
+  /* Placeholder Text Color */
+  input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Signup Button */
+  .signup-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  /* Login Redirect */
+  .login-redirect {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .login-redirect a {
+    color: #ff9800;
+    text-decoration: none;
+  }
+  
+  .login-redirect a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hover Effects */
+  .signup-btn:hover {
+    background-color: #e68900;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 500px) {
+    .signup-box {
+      width: 80%;
+    }
+  }
+  

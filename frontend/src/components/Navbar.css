@@ -1,0 +1,89 @@
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffcc80;
+  position:relative;
+  z-index: 2;
+}
+
+/* Logo */
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Right Section (Logout + Hamburger) */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+/* Logout Button */
+.logout-btn {
+  padding: 8px 12px;
+  border: none;
+  background-color: #ff5733;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  font-size: 28px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  z-index: 1000;
+}
+
+.dropdown-menu button {
+  padding: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+  width: 100%;
+}
+
+.dropdown-menu button:hover {
+  background-color: #f0f0f0;
+}
+
+.hamItem{
+  color: black;
+}
