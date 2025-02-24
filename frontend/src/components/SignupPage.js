@@ -19,7 +19,7 @@ const SignupPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setMessage(""); // Clear previous messages
+    setMessage(""); 
 
     if (formData.password !== formData.confirmPassword) {
       setMessage("❌ Passwords do not match!");

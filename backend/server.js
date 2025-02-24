@@ -181,6 +181,21 @@ app.post("/api/comments/add", (req, res) => {
 });
 
 
+// API to get pets by breed
+app.get("/api/pets/:breed", (req, res) => {
+  const breed = req.params.breed;
+  const query = "SELECT * FROM pets_for_sale WHERE breed = ?";
+
+  db.query(query, [breed], (err, results) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).json({ error: "Database query failed" });
+    }
+    res.json(results);
+  });
+});
+
+
 
 // Start Server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

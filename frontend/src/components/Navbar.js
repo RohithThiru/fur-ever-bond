@@ -7,12 +7,12 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleLogout = () => {
-    localStorage.removeItem("token"); // Clear token on logout
-    history.push("/login"); // Redirect to login page
+    localStorage.removeItem("token");
+    history.push("/login"); 
   };
 
   const handleNavigation = (route) => {
-    setMenuOpen(false); // Close menu on navigation
+    setMenuOpen(false); 
     history.push(route);
   };
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import "./AddBlog.css"; // Import the CSS file
+import "./AddBlog.css"; 
 
 const AddBlog = () => {
   const [title, setTitle] = useState("");
@@ -17,7 +17,7 @@ const AddBlog = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const username = localStorage.getItem("username"); // Get username from local storage
+    const username = localStorage.getItem("username"); 
     if (!username) {
         console.error("❌ No username found in local storage!");
         return;
@@ -26,7 +26,7 @@ const AddBlog = () => {
     const formData = new FormData();
     formData.append("title", title);
     formData.append("content", content);
-    formData.append("username", username); // Append username to form data
+    formData.append("username", username); 
 
     if (media) {
         formData.append("media", media);
@@ -41,7 +41,7 @@ const AddBlog = () => {
         const result = await response.json();
         if (response.ok) {
             console.log("✅ Blog Added:", result);
-            history.push("/"); // Redirect after success
+            history.push("/"); 
         } else {
             console.error("❌ Failed to add blog:", result.error);
         }

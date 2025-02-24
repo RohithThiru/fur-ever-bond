@@ -12,30 +12,26 @@
     align-items: center;
   }
   
-  /* Fully transparent login box with a soft blur effect */
   .login-box {
-    background: rgba(255, 255, 255, 0.1); /* Almost fully transparent */
+    background: rgba(255, 255, 255, 0.1); 
     padding: 30px;
     border-radius: 15px;
-    backdrop-filter: blur(20px); /* Adds a frosted glass effect */
+    backdrop-filter: blur(20px); 
     text-align: center;
     width: 350px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   }
   
-  /* Title */
   h2 {
     font-size: 26px;
     color: #fff;
   }
   
-  /* Subtitle */
   p {
     font-size: 16px;
     color: #ddd;
   }
   
-  /* Input Fields */
   input {
     width: 100%;
     padding: 10px;
@@ -48,12 +44,10 @@
     outline: none;
   }
   
-  /* Placeholder Text Color */
   input::placeholder {
     color: rgba(255, 255, 255, 0.8);
   }
   
-  /* Login Button */
   .login-btn {
     width: 100%;
     padding: 12px;
@@ -66,7 +60,6 @@
     margin-top: 10px;
   }
   
-  /* Signup Button */
   .signup-btn {
     width: 100%;
     padding: 12px;
@@ -79,7 +72,6 @@
     margin-top: 10px;
   }
   
-  /* Hover Effects */
   .login-btn:hover {
     background-color: #e68900;
   }
@@ -88,7 +80,6 @@
     background-color: rgba(255, 255, 255, 0.2);
   }
   
-  /* Responsive Design */
   @media (max-width: 500px) {
     .login-box {
       width: 80%;

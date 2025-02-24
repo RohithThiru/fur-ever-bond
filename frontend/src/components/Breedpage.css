@@ -1,0 +1,46 @@
+.breed-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #3b0040; 
+    min-height: 100vh;
+}
+
+.page-title {
+    color: #ffccff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.breed-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.breed-card {
+    background: #e6ccff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.breed-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.breed-name {
+    font-size: 1.5rem;
+    color: #3b0040;
+    margin: 10px 0;
+}
+
+.breed-description {
+    font-size: 1rem;
+    color: #666;
+}

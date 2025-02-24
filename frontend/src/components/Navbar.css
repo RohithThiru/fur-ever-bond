@@ -4,9 +4,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #ffcc80;
-  position:relative;
+  background-color: #3d005e; 
+  position: relative;
   z-index: 2;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 /* Logo */
@@ -14,10 +15,9 @@
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
-  color: #333;
+  color: #ffccff; 
 }
 
-/* Navigation Links */
 .nav-links {
   display: flex;
   list-style: none;
@@ -26,11 +26,15 @@
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: #ffccff; 
   font-weight: bold;
+  transition: color 0.3s ease-in-out;
 }
 
-/* Right Section (Logout + Hamburger) */
+.nav-links a:hover {
+  color: #ff85ff; 
+}
+
 .right-section {
   display: flex;
   align-items: center;
@@ -38,32 +42,35 @@
   position: relative;
 }
 
-/* Logout Button */
 .logout-btn {
   padding: 8px 12px;
   border: none;
-  background-color: #ff5733;
+  background: linear-gradient(45deg, #ff4f4f, #ff85ff);
   color: white;
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
+  transition: transform 0.2s ease-in-out;
 }
 
-/* Hamburger Menu */
+.logout-btn:hover {
+  transform: scale(1.1);
+}
+
 .hamburger-menu {
   font-size: 28px;
   cursor: pointer;
   margin-left: 10px;
+  color: #ffccff; 
 }
 
-/* Dropdown Menu */
 .dropdown-menu {
   position: absolute;
   right: 0;
   top: 50px;
-  background: white;
+  background: #5a007f; 
   border-radius: 5px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   width: 150px;
@@ -78,12 +85,14 @@
   text-align: left;
   font-size: 16px;
   width: 100%;
+  color: #ffccff; 
+  transition: background 0.3s ease-in-out;
 }
 
 .dropdown-menu button:hover {
-  background-color: #f0f0f0;
+  background-color: #7a009f;
 }
 
-.hamItem{
-  color: black;
+.hamItem {
+  color: #ffccff; 
 }

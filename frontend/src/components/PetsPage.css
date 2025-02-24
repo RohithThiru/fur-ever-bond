@@ -1,0 +1,92 @@
+/* Global Styles */
+body {
+    background-color: #1a002b;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container */
+  .pets-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Page Title */
+  .page-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #d4aaff;
+    text-shadow: 2px 2px 10px rgba(212, 170, 255, 0.7);
+    margin-bottom: 20px;
+  }
+  
+  /* Grid Layout */
+  .pets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* Pet Card */
+  .pet-card {
+    background: linear-gradient(135deg, #33004d 30%, #5a006e 100%);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .pet-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(212, 170, 255, 0.5);
+  }
+  
+  /* Pet Image */
+  .pet-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;  /* Ensures the image fills the box */
+    border-radius: 10px;
+    border: 3px solid #d4aaff;
+    display: block;  /* Ensures no extra spacing */
+    background-color: #2a003b; /* Fallback if image doesn't load */
+  }
+  
+  
+  /* Pet Name */
+  .pet-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffb3ff;
+    margin-top: 10px;
+  }
+  
+  /* Pet Details */
+  .pet-card p {
+    font-size: 1rem;
+    color: #e6ccff;
+    margin: 5px 0;
+  }
+  
+  /* Description */
+  .pet-description {
+    font-size: 0.9rem;
+    color: #c2a4e3;
+    font-style: italic;
+  }
+  
+  /* Loading & No Data */
+  p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #d4aaff;
+  }
+  

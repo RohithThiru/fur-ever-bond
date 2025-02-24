@@ -4,7 +4,7 @@ import axios from "axios";
 import "./LoginPage.css";
 
 const LoginPage = () => {
-  const history = useHistory(); // Using useHistory instead of useNavigate
+  const history = useHistory();
   const [formData, setFormData] = useState({ username: "", password: "" });
   const [error, setError] = useState("");
 
@@ -18,18 +18,18 @@ const LoginPage = () => {
         headers: { "Content-Type": "application/json" },
       });
 
-      // If login is successful, store the token and redirect to home page
+      
       localStorage.setItem("token", response.data.token);
       alert("Login successful!");
       localStorage.setItem("username", formData.username);
-      history.push("/"); // Redirect to home page
+      history.push("/"); 
     } catch (error) {
       setError(error.response?.data?.message || "Something went wrong");
     }
   };
 
   const handleSignupRedirect = () => {
-    history.push("/signup"); // Redirect to signup page
+    history.push("/signup"); 
   };
 
   return (

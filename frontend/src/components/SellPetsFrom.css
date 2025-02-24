@@ -2,14 +2,14 @@
     max-width: 500px;
     margin: 40px auto;
     padding: 20px;
-    background: #fff9e6; /* Light Background */
+    background: #fff9e6; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
   }
   
   h2 {
     text-align: center;
-    color: #ff4f4f; /* Heading Color */
+    color: #ff4f4f; 
   }
   
   form {
@@ -26,11 +26,10 @@
     border: 1px solid #ff6b6b;
     border-radius: 5px;
     background: white;
-    color: #333; /* Dark text for visibility */
+    color: #333; 
     font-size: 16px;
   }
   
-  /* Darken Placeholder Text */
   input::placeholder,
   textarea::placeholder {
     color: #333; 

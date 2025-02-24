@@ -121,7 +121,7 @@ const BlogList = () => {
                     {comments[blog.blog_id] && comments[blog.blog_id].length > 0 ? (
                       comments[blog.blog_id].map((c, index) => (
                         <div key={index} className="comment-item">
-                          <strong>{c.user_name}:</strong> {c.content}
+                          <strong className="comments">{c.user_name}:</strong> {c.content}
                         </div>
                       ))
                     ) : (

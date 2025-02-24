@@ -31,10 +31,10 @@ const Pets = () => {
 
   const filteredPets = pets.filter((pet) => {
     return (
-      (filters.petType === "" || pet.pet_type === filters.petType) ||
-      (filters.gender === "" || pet.gender === filters.gender) ||
-      (filters.vaccination === "" || pet.vaccination_status === filters.vaccination) ||
-      (filters.location === "" || pet.location === filters.location)
+      (filters.petType === "" || pet.pet_type.toLowerCase() === filters.petType.toLowerCase()) &&
+      (filters.gender === "" || pet.gender.toLowerCase() === filters.gender.toLowerCase()) &&
+      (filters.vaccination === "" || pet.vaccination_status.toLowerCase() === filters.vaccination.toLowerCase()) &&
+      (filters.location === "" || pet.location.toLowerCase() === filters.location.toLowerCase())
     );
   });
 
@@ -42,34 +42,29 @@ const Pets = () => {
     <>
       <Navbar />
       <div className="main-container">
-        {/* Sidebar for filters */}
         <div className="sidebar">
           <h3>Filter Pets</h3>
-          
           <label>Pet Type:</label>
-          <select name="petType" onChange={handleFilterChange}>
+          <select name="petType" onChange={handleFilterChange} value={filters.petType}>
             <option value="">All</option>
             <option value="dog">Dog</option>
             <option value="cat">Cat</option>
           </select>
-
           <label>Gender:</label>
-          <select name="gender" onChange={handleFilterChange}>
+          <select name="gender" onChange={handleFilterChange} value={filters.gender}>
             <option value="">All</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
-
           <label>Vaccination:</label>
-          <select name="vaccination" onChange={handleFilterChange}>
+          <select name="vaccination" onChange={handleFilterChange} value={filters.vaccination}>
             <option value="">All</option>
             <option value="Fully Vaccinated">Fully Vaccinated</option>
             <option value="Partially Vaccinated">Partially Vaccinated</option>
             <option value="Not Vaccinated">Not Vaccinated</option>
           </select>
-
           <label>Location:</label>
-          <select name="location" onChange={handleFilterChange}>
+          <select name="location" onChange={handleFilterChange} value={filters.location}>
             <option value="">All</option>
             <option value="chennai">Chennai</option>
             <option value="coimbatore">Coimbatore</option>
@@ -79,8 +74,6 @@ const Pets = () => {
             <option value="hyderabad">Hyderabad</option>
           </select>
         </div>
-
-        {/* Pets Display Section */}
         <div className="pets-container">
           <h2>Find Your Perfect Pet Companion 🐶🐾</h2>
           <div className="pets-grid">
