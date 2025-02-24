@@ -10,7 +10,7 @@ import Pets from "./components/Pets";
 import HomeO from "./components/HomeO";
 import CatsPage from "./components/CatsPage";
 import DogsPage from "./components/DogsPage";
-import PetsPage from "./components/PetsPage";
+import PetsPage from "./components/PetsPag";
 const App = () => {
   return (
     <Router>

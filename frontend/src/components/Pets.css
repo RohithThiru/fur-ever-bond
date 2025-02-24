@@ -23,7 +23,7 @@
     left: 0;
     bottom: 0;
     overflow-y: auto;
-    z-index: 1000;  /* Ensures sidebar stays on top */
+     /* Ensures sidebar stays on top */
     margin-right: 1000px;
 }
 
@@ -79,6 +79,7 @@
     padding: 20px;
     margin-left: 270px; /* Ensures no overlap with the sidebar */
     text-align: center;
+    
 }
 
 /* PETS GRID */
@@ -86,7 +87,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 /* PET CARD */
@@ -99,6 +100,7 @@
     text-align: left;
     transition: 0.3s;
     color: white;
+    margin-left: 120px;
 }
 
 .pet-card:hover {

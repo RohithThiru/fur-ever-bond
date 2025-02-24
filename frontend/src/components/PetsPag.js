@@ -27,7 +27,7 @@ const PetsPage = () => {
     <>
       <Navbar />
       <div className="pets-container">
-        <h1 className="page-title">Available {breedName} Cats 🐱</h1>
+        <h1 className="page-title">Available {breedName}</h1>
 
         {loading ? (
           <p>Loading...</p>
