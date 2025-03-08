@@ -11,6 +11,7 @@ import HomeO from "./components/HomeO";
 import CatsPage from "./components/CatsPage";
 import DogsPage from "./components/DogsPage";
 import PetsPage from "./components/PetsPag";
+import About from "./components/About";
 const App = () => {
   return (
     <Router>
@@ -20,7 +21,7 @@ const App = () => {
         <Route path="/home" component={HomeO} />
         <Route path="/add-blog" component={AddBlog} />
         <Route path="/pets" component={Pets} />
-        <Route path="/about" render={() => <h2>About Page</h2>} />
+        <Route path="/about" component={About} />
         <Route path="/" exact component={BlogList} />
         <Route path="/sell-pets" component={SellPetsForm} />
         <Route path="/dogs" component={DogsPage} />

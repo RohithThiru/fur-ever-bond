@@ -6,6 +6,7 @@ const jwt = require("jsonwebtoken");
 const cors = require("cors");
 const path = require("path");
 const blogRoutes = require("./blogRoutes");
+const twilio = require("twilio");
 
 const multer = require("multer");
 
@@ -194,6 +195,34 @@ app.get("/api/pets/:breed", (req, res) => {
     res.json(results);
   });
 });
+
+
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
+const twilioPhoneNumber = process.env.TWILIO_PHONE_NUMBER;
+const client = twilio(accountSid, authToken);
+
+app.post("/api/contact-owner", async (req, res) => {
+  const { phone } = req.body;
+  console.log("hello")
+  if (!phone) {
+      return res.status(400).json({ success: false, message: "Owner phone number is required" });
+  }
+
+  try {
+      await client.messages.create({
+          body: "I am interested in taking care of your pet.",
+          from: twilioPhoneNumber,
+          to: phone
+      });
+
+      res.json({ success: true, message: "SMS sent successfully!" });
+  } catch (error) {
+    console.log(error);
+      res.status(500).json({ success: false, message: error.message });
+  }
+});
+
 
 
 

@@ -29,6 +29,22 @@ const Pets = () => {
     setFilters({ ...filters, [e.target.name]: e.target.value });
   };
 
+  const contactOwner = async (ownerPhone) => {
+    try {
+      const response = await axios.post("http://localhost:5000/api/contact-owner", {
+        phone: ownerPhone,
+      });
+      if (response.data.success) {
+        alert("Message sent successfully!");
+      } else {
+        alert("Failed to send message.");
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("Error sending message.");
+    }
+  };
+
   const filteredPets = pets.filter((pet) => {
     return (
       (filters.petType === "" || pet.pet_type.toLowerCase() === filters.petType.toLowerCase()) &&
@@ -89,10 +105,12 @@ const Pets = () => {
                     <p><strong>Breed:</strong> {pet.breed}</p>
                     <p><strong>Age:</strong> {pet.age}</p>
                     <p><strong>Gender:</strong> {pet.gender}</p>
+                    <p><strong>Contact:</strong> {pet.phone}</p>
                     <p><strong>Vaccination:</strong> {pet.vaccination_status}</p>
                     <p><strong>Location:</strong> {pet.location}</p>
                     <p><strong>Price:</strong> ${pet.price}</p>
                     <p className="description">{pet.description}</p>
+                    <button onClick={() => contactOwner(pet.phone)}>Contact Owner</button>
                   </div>
                 </div>
               ))

@@ -47,6 +47,7 @@ const upload = multer({ storage });
 
 // 📌 API: Add a New Blog
 router.post("/add-blog", upload.single("media"), (req, res) => {
+  console.log("hello");
   const { title, content, username } = req.body; // Get username from request body
   const blog_id = uuidv4();
   const media_path = req.file ? req.file.filename : null;
